@@ -20,8 +20,14 @@ Follow these steps to set up and run the project:
 
 ## How To Use the NPM Scripts
 
-- npm test: **Run both unit and end-to-end tests**
-- npm run test-unit: **Run unit tests**
-- npm run test-e2e: **Run end-to-end tests**
-- npm run lint: **Lint the code**
-- npm run build: **Build the project**
+- **Lint the code:** `npm run lint`
+
+- **Build the project:** `npm run build`
+
+- **Start the development server:** `npm run start`
+
+- **Testing:**
+
+  - Unit test `npm run test-unit`
+
+  - E2E test `npm run test-e2e`
