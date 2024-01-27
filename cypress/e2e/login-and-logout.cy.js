@@ -1,4 +1,4 @@
-describe("Login Test with valid and invalid credentials", () => {
+describe("E2E Testing for login and logout", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.wait(500);
