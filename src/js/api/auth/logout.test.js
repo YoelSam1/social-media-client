@@ -1,10 +1,12 @@
+/* eslint-disable no-undef */
 import { logout } from "./logout.js";
-import { remove } from "../../storage/index.js";
 
 // Mock
-jest.mock("../../storage/index.js", () => ({
-  remove: jest.fn(),
-}));
+const localStorageMock = {
+  removeItem: jest.fn(),
+};
+
+global.localStorage = localStorageMock;
 
 describe("logout function", () => {
   afterEach(() => {
@@ -14,7 +16,7 @@ describe("logout function", () => {
   it("should clear the token from the browser", () => {
     logout();
 
-    expect(remove).toHaveBeenCalledWith("token");
-    expect(remove).toHaveBeenCalledWith("profile");
+    expect(localStorageMock.removeItem).toHaveBeenCalledWith("token");
+    expect(localStorageMock.removeItem).toHaveBeenCalledWith("profile");
   });
 });
