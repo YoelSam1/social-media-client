@@ -17,8 +17,8 @@ describe("login function", () => {
   });
 
   it("should store a token when provided with valid credentials", async () => {
-    const validEmail = "test@example.com";
-    const validPassword = "password123";
+    const validEmail = "yes@noroff.no";
+    const validPassword = "Menkina1";
 
     fetch.mockResolvedValueOnce({
       ok: true,
